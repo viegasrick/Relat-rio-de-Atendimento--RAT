@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório de Atendimento - RAT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form id="ratForm" action="https://api.sheetmonkey.io/form/fxS1JNaQbCiAZ1yJmCmhgp" method="post">
+        <div class="header">
+            <h2>RELATÓRIO DE ATENDIMENTO – RAT</h2>
+            <img src="logo.png" alt="Logo" class="logo">
+        </div>
+
+        <div class="form-row centralizado">
+            <label for="local_data">Local e Data do Relatório:</label>
+            <input type="text" id="local_data" name="LOCAL_DATA" placeholder="Digite o local e data" style="max-width: 200px;">
+            <span>-BA.</span>
+        </div>
+        
+        <p><strong>Local e Data do Relatório:</strong> Digite o local e data -BA.</p>
+        <p><strong>Nome da Contratada:</strong> REDE LOCAÇÃO DE MÃO DE OBRA TEMPORÁRIA LTDA</p>
+        <p><strong>Número do Contrato:</strong> 2023.7421.0686</p>
+        <p><strong>CNPJ:</strong> 14.757.507/0001-07</p>
+        
+        <div class="form-row">
+            <label for="dependencia">Nome da Dependência (atendida):</label>
+            <input type="text" id="dependencia" name="DEPENDENCIA" placeholder="Digite o nome da dependência" style="max-width: 200px;">
+            <span>-BA</span>
+        </div>
+        
+        <div class="form-row">
+            <label for="prefixo">Prefixo:</label>
+            <input type="text" id="prefixo" name="PREFIXO" style="max-width: 100px;" placeholder="Digite o prefixo">
+            <span>SB: 0</span>
+        </div>
+
+        <table border="1">
+            <tr>
+                <th></th>  <!-- Para marcar X -->
+                <th>Serviço Realizado</th>  <!-- Nome do serviço -->
+                <th>Status</th>  <!-- Opções SIM, NÃO, NÃO SE APLICA -->
+                <th>Detalhes do Status</th>  <!-- Aparece só se "Sim" for selecionado -->
+                <th>Rubrica Funci BB</th>  <!-- Assinatura -->
+            </tr>
+        
+            <!-- Lista de serviços -->
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>Limpeza de Fachada</td>
+                <td>
+                    <select class="select-status" onchange="toggleDetails(this)">
+                        <option value="">Selecione</option>
+                        <option value="Sim">Sim</option>
+                        <option value="Não">Não</option>
+                        <option value="Nao se aplica">Não se aplica</option>
+                    </select>
+                </td>
+                <td>
+                    <select class="status-details" style="display: none;">
+                        <option value="">Selecione o status</option>
+                        <option value="Realizado">Realizado</option>
+                        <option value="Não Realizado">Não Realizado</option>
+                        <option value="Em andamento">Em andamento</option>
+                    </select>
+                </td>
+                <td><input type="text"></td>
+            </tr>
+            
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>Limpeza de Calhas</td>
+                <td>
+                    <select class="select-status" onchange="toggleDetails(this)">
+                        <option value="">Selecione</option>
+                        <option value="Sim">Sim</option>
+                        <option value="Não">Não</option>
+                        <option value="Nao se aplica">Não se aplica</option>
+                    </select>
+                </td>
+                <td>
+                    <select class="status-details" style="display: none;">
+                        <option value="">Selecione o status</option>
+                        <option value="Realizado">Realizado</option>
+                        <option value="Não Realizado">Não Realizado</option>
+                        <option value="Em andamento">Em andamento</option>
+                    </select>
+                </td>
+                <td><input type="text"></td>
+            </tr>
+        
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>Limpeza de Caixa d'Água</td>
+                <td>
+                    <select class="select-status" onchange="toggleDetails(this)">
+                        <option value="">Selecione</option>
+                        <option value="Sim">Sim</option>
+                        <option value="Não">Não</option>
+                        <option value="Nao se aplica">Não se aplica</option>
+                    </select>
+                </td>
+                <td>
+                    <select class="status-details" style="display: none;">
+                        <option value="">Selecione o status</option>
+                        <option value="Realizado">Realizado</option>
+                        <option value="Não Realizado">Não Realizado</option>
+                        <option value="Em andamento">Em andamento</option>
+                    </select>
+                </td>
+                <td><input type="text"></td>
+            </tr>
+        
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>Limpeza de Caixa de Gordura</td>
+                <td>
+                    <select class="select-status" onchange="toggleDetails(this)">
+                        <option value="">Selecione</option>
+                        <option value="Sim">Sim</option>
+                        <option value="Não">Não</option>
+                        <option value="Nao se aplica">Não se aplica</option>
+                    </select>
+                </td>
+                <td>
+                    <select class="status-details" style="display: none;">
+                        <option value="">Selecione o status</option>
+                        <option value="Realizado">Realizado</option>
+                        <option value="Não Realizado">Não Realizado</option>
+                        <option value="Em andamento">Em andamento</option>
+                    </select>
+                </td>
+                <td><input type="text"></td>
+            </tr>
+        
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>Limpeza de Cisterna</td>
+                <td>
+                    <select class="select-status" onchange="toggleDetails(this)">
+                        <option value="">Selecione</option>
+                        <option value="Sim">Sim</option>
+                        <option value="Não">Não</option>
+                        <option value="Nao se aplica">Não se aplica</option>
+                    </select>
+                </td>
+                <td>
+                    <select class="status-details" style="display: none;">
+                        <option value="">Selecione o status</option>
+                        <option value="Realizado">Realizado</option>
+                        <option value="Não Realizado">Não Realizado</option>
+                        <option value="Em andamento">Em andamento</option>
+                    </select>
+                </td>
+                <td><input type="text"></td>
+            </tr>
+        
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>Reforço de Limpeza 8Hrs</td>
+                <td>
+                    <select class="select-status" onchange="toggleDetails(this)">
+                        <option value="">Selecione</option>
+                        <option value="Sim">Sim</option>
+                        <option value="Não">Não</option>
+                        <option value="Nao ">Não se aplica</option>
+                    </select>
+                </td>
+                <td>
+                    <select class="status-details" style="display: none;">
+                        <option value="">Selecione o status</option>
+                        <option value="Realizado">Realizado</option>
+                        <option value="Não Realizado">Não Realizado</option>
+                        <option value="Em andamento">Em andamento</option>
+                    </select>
+                </td>
+                <td><input type="text"></td>
+            </tr>
+        
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>Serviços de Jardinagem</td>
+                <td>
+                    <select class="select-status" onchange="toggleDetails(this)">
+                        <option value="">Selecione</option>
+                        <option value="Sim">Sim</option>
+                        <option value="Não">Não</option>
+                        <option value="Nao se aplica">Não se aplica</option>
+                    </select>
+                </td>
+                <td>
+                    <select class="status-details" style="display: none;">
+                        <option value="">Selecione o status</option>
+                        <option value="Realizado">Realizado</option>
+                        <option value="Não Realizado">Não Realizado</option>
+                        <option value="Em andamento">Em andamento</option>
+                    </select>
+                </td>
+                <td><input type="text"></td>
+            </tr>
+        
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>Limpeza de Carpete</td>
+                <td>
+                    <select class="select-status" onchange="toggleDetails(this)">
+                        <option value="">Selecione</option>
+                        <option value="Sim">Sim</option>
+                        <option value="Não">Não</option>
+                        <option value="Nao se aplica">Não se aplica</option>
+                    </select>
+                </td>
+                <td>
+                    <select class="status-details" style="display: none;">
+                        <option value="">Selecione o status</option>
+                        <option value="Realizado">Realizado</option>
+                        <option value="Não Realizado">Não Realizado</option>
+                    </select>
+                </td>
+                <td><input type="text"></td>
+            </tr>
+        </table>
+
+
+    <BR>
+        <div class="form-row">
+            <label for="instrucao1">(1) Rubrica do primeiro gestor da dependência ou de funci BB designado 
+                por ele para o acompanhamento das execuções das tarefas semestrais 
+                (conforme contrato), confirmando sua total e perfeita execução.</label>
+            <input type="text" id="instrucao1"  placeholder="Digite a rubrica do gestor">
+        </div>
+        <div class="form-row">
+            <label for="instrucao2">(2) Caso alguma tarefa não tenha sido realizada ou tenha sido realizada parcialmente ou tenha sido realizada 
+                com má qualidade, o Funci BB deverá preencher a coluna “Observação” com a respectiva informação.</label>
+            <input type="text" id="instrucao2"  placeholder="Digite a observação"> 
+        </div>
+        <div class="form-row">
+            <label for="instrucao3">(3) Caso alguma tarefa não tenha sido realizada ou sua execução
+                 tenha sido prejudicada, a contratada deverá apor justificativa na coluna correspondente</label>
+            <input type="text" id="instrucao3"  placeholder="Digite a justificativa">
+        </div>
+
+        <!-- Assinaturas e campos relacionados -->
+        <div class="form-row side-by-side">
+            <!-- Coluna A -->
+            <div class="column-a">
+                <label for="assinatura_empresa">ASSINATURA DO REPRESENTANTE DA EMPRESA REDE:</label>
+                <input type="text" id="assinatura_empresa" name="PRESTADOR" placeholder="Assinatura da empresa">
+            </div>
+            <!-- Coluna C -->
+            <div class="column-c">
+                <label for="matricula_funcionario">Matrícula:</label>
+                <input type="text" id="matricula_funcionario" placeholder="Matrícula do funcionário">
+
+                <label for="nome_funcionario">Nome:</label>
+                <input type="text" id="nome_funcionario" placeholder="Nome do funcionário">
+            </div>
+        </div>
+
+        
+
+        <div class="footer-info">
+            <p>REDE LOCAÇÃO DE MÃO DE OBRA TEMPORÁRIA LTDA</p>
+            <p>CNPJ n° 14.757.507/0001-07 | INSC MUNICIPAL: 903.869/001-39</p>
+            <p>Fone/Whatsapp: (0*71) 71982004149</p>
+        </div>
+        
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+        <script src="scripts.js"></script>
+
+    </form>
+
+
+    <button id="gerarPDF" onclick="gerarPDF()">Gerar o PDF</button>
+
+</body>
+</html>

@@ -8,80 +8,36 @@ body {
 }
 
 
+
 @media screen and (max-width: 768px) {
     body {
-      padding: 10px;
+        padding: 10px;
     }
-  
     table {
-      font-size: 14px;  /* Menor fonte para celular */
+        font-size: 14px;
     }
-  
     th, td {
-      padding: 5px;  /* Menos padding para caber melhor */
+        padding: 5px;
     }
-  }
-  
-  /* Para telas muito pequenas (exemplo de dispositivos móveis pequenos) */
-  @media screen and (max-width: 480px) {
+}
+
+@media screen and (max-width: 480px) {
     table {
-      font-size: 12px;
+        font-size: 12px;
     }
-  
     th, td {
-      padding: 4px;
+        padding: 4px;
     }
-  }
-  
-
-.form-row label {
-    font-size: 10px;  /* Tamanho da fonte para os rótulos das instruções */
 }
-
-.form-row input {
-    font-size: 10px;  /* Tamanho da fonte para os campos de entrada */
-}
-
-.centralizado {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 15px;
-}
-
-.centralizado label {
-    margin-right: 10px;
-}
-
-.centralizado input {
-    max-width: 200px;
-    margin-right: 5px;
-}
-
-
-.header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.logo {
-    max-width: 150px; /* Aumente para o tamanho desejado */
-    height: auto;
-}
-
-
 
 h2 {
-    Font-size: 12px;  /* Tamanho da fonte para "RELATÓRIO DE ATENDIMENTO – RAT" */
+    font-size: 12px;
     margin: 0;
-    flex-grow: 1; /* Faz o título ocupar o espaço disponível */
-    text-align: center; /* Centraliza o título */
+    flex-grow: 1;
+    text-align: center;
 }
-table {
 
+table {
     width: 100%;
     border-collapse: collapse;
     font-family: Arial, sans-serif;
@@ -128,24 +84,24 @@ form {
     margin-bottom: 15px;
     font-size: 14px;
 }
-p{
-    font-size: 11px;
-}
 
-.form-row label { 
-    font-size: 11px; /* Tamanho da fonte para os campos de texto */
+.form-row label {
+    font-size: 11px;
     font-weight: bold;
 }
 
 .form-row input[type="text"] {
-    font-size: 11px;
+    font-size: 14px;
     width: 100%;
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    font-size: 14px;
 }
 
+p, .footer-info p, .footer-left p, .footer-right p {
+    font-size: 10px;
+    margin: 0;
+}
 
 #gerarPDF {
     font-size: 14px;
@@ -161,46 +117,60 @@ p{
     background-color: #0056b3;
 }
 
-
 .table {
     width: 100%;
     margin-top: 20px;
     border-collapse: collapse;
 }
 
-/* Definindo o tamanho da fonte para a seção de serviço realizado */
 .table th {
-    font-size: 11px; /* Tamanho da fonte para os cabeçalhos da tabela */
+    font-size: 11px;
 }
 
-
 .table td {
-    font-size: 8px; /* Tamanho da fonte para os dados da tabela */
-}
-
-
-.table td {
+    font-size: 8px;
     padding: 10px;
     border: 1px solid #ddd;
     text-align: left;
 }
 
+.centralizado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.centralizado label {
+    margin-right: 10px;
+}
+
+.centralizado input {
+    max-width: 200px;
+    margin-right: 5px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logo {
+    max-width: 780px;
+    height: auto;
+}
+
 .footer-info {
     text-align: center;
-    font-size: 10px;
     margin-top: 30px;
 }
-.footer-info P{
-    margin: 0;
-} 
 
 .footer-left, .footer-right {
     width: 45%;
     text-align: center;
-}
-
-.footer-left p, .footer-right p {
-    font-size: 10px;
 }
 
 .side-by-side {
@@ -210,14 +180,12 @@ p{
     flex-wrap: wrap;
 }
 
-.column-a {
+.column-a, .column-c {
     width: 48%;
     display: inline-block;
 }
 
 .column-c {
-    width: 48%;
-    display: inline-block;
     text-align: left;
 }
 
